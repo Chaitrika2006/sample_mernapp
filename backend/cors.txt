@@ -1,0 +1,4 @@
+cros=> cross browser scripting erorr(npm install cros)(package)
+something like firewall
+it is used to allow req from frontend to backend
+used to secure ur backend from hackers

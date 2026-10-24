@@ -1,0 +1,2 @@
+axios=>used to connect frontend to backend
+used to calll the api's in the backend w http methods(get,put,post etc)
