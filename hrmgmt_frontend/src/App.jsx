@@ -6,6 +6,9 @@ import Contact from './pages/Contact'
 import Login from './pages/login'
 import UserHome from './pages/UserHome'
 import Register from './pages/Register'
+import HrHome from './pages/HrHome'
+import EmpHome from './pages/EmpHome'
+import AdminHome from './pages/AdminHome'
 import {Routes,Route} from 'react-router-dom'
 
 function App() {  
@@ -13,6 +16,9 @@ function App() {
     <div>
      <Header_component></Header_component> 
     <Routes>
+      <Route path="/hrhome" element={<HrHome/>}></Route>
+      <Route path="/emphome" element={<EmpHome/>}></Route>
+      <Route path="/adminhome" element={<AdminHome/>}></Route>
        <Route path="/" element={<Home/>}></Route>
         <Route path="/login" element={<Login/>}></Route>
         <Route path="/userhome" element={<UserHome/>}></Route>

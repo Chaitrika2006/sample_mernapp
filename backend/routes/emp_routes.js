@@ -1,3 +1,4 @@
+//localhost:3000/api/emp/login
 let express=require('express');
 let router=express.Router();
 let {users}=require('../models/users');
@@ -21,12 +22,19 @@ router.get("/viewtasks",(req,res)=>{
    if(emailcheck){
     let passwordcheck=await bcrypt.compare(data.password,emailcheck.password);
     if(passwordcheck){
-     res.send("login successful");
+      res.send({"message":"login success",
+        "user":{
+          _id:emailcheck._id,
+          name:emailcheck.name,
+          email:emailcheck.email,
+          role:emailcheck.role
+        }
+      });
     }else{
-     res.send("invalid credentials");
+     res.send({"message":"invalid credentials"});
     }
    }else{
-    res.send("user not found");
+    res.send({"message":"user not found"})
    }
   })  
  module.exports=router;
